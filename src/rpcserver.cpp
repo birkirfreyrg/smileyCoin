@@ -213,20 +213,47 @@ Value stop(const Array& params, bool fHelp)
 }
 
 //new command
-Value getcomplement(const Array& params, bool fHelp)
+Value getcompliment(const Array& params, bool fHelp)
 {
   if (fHelp || params.size() > 0) {
     throw runtime_error(
-      "getcomplement \n"
-      "Returns a complement to brighten your day.\n"
+      "getcompliment \n"
+      "Returns a compliment to brighten your day.\n"
       "Arguments:\n"
       "No Arguments\n"
       "Result:\n"
-      "\"Complement\" (string) The complement\n"
+      "\"compliment\" (string) The compliment\n"
     );
   }
-  int test = 10;
-  return test;
+  const char* compliment[23] =
+  {
+    "You're always learning new things and trying to better yourself. That's awesome.",
+    "You're great at figuring stuff out.",
+    "Everyone gets knocked down sometimes; only people like you get back up again and keep going.",
+    "I am so proud of you, and I hope you are too! ",
+    "You are making a difference.",
+    "You deserve a hug right now.",
+    "You're a great example to others.",
+    "You look great today.",
+    "I appreciate you.",
+    "You are perfect just the way you are.",
+    "You are enough.",
+    "On a scale from 1 to 10, you're an 11.",
+    "Everything would be better if more people were like you.",
+    "You are an incredible human.",
+    "You're wonderful.",
+    "You're better than a triple-scoop ice cream cone. With sprinkles.",
+    "You're one of a kind.",
+    "If you were a box of crayons, you'd be the big industrial name-brand one with a built-in sharpener.",
+    "You're really something special.",
+    "You're a smart cookie.",
+    "You're inspiring.",
+    "Dont't worry if it doesn't work right. If everything did, you'd be out of a job.",
+    "I believe in you!"
+  };
+  int randCompliment = rand() % 23;
+  string compliment = char[randCompliment];
+  return compliment;
 }
 
 //
@@ -241,7 +268,7 @@ static const CRPCCommand vRPCCommands[] =
     { "getinfo",                &getinfo,                true,      false,      false }, /* uses wallet if enabled */
     { "help",                   &help,                   true,      true,       false },
     { "stop",                   &stop,                   true,      true,       false },
-    { "getcomplement",          &getcomplement,          true,      true,       false },
+    { "getcompliment",          &getcompliment,          true,      true,       false },
 
     /* P2P networking */
     { "getnetworkinfo",         &getnetworkinfo,         true,      false,      false },
