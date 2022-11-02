@@ -228,6 +228,9 @@ static const CRPCCommand vRPCCommands[] =
     { "help",                   &help,                   true,      true,       false },
     { "stop",                   &stop,                   true,      true,       false },
 
+    /* New commands added by me */
+    { "getcomplement",          &getcomplement,          true,      true,       false },
+
     /* P2P networking */
     { "getnetworkinfo",         &getnetworkinfo,         true,      false,      false },
     { "addnode",                &addnode,                true,      true,       false },
