@@ -74,7 +74,7 @@ string AccountFromValue(const Value& value)
 
 Value getcomplement(const Array& params, bool fHelp)
 {
-  if (fHelp ||params.size() > 2)
+  if (fHelp || params.size() > 0)
     throw runtime_error(
       "getcomplement \n"
       "Returns a complement to brighten your day.\n"
@@ -84,7 +84,7 @@ Value getcomplement(const Array& params, bool fHelp)
       "\"Complement\" (string) The complement"
     );
   string complement;
-  complement = "Test123";
+  complement = "Test";
   return complement;
 }
 
