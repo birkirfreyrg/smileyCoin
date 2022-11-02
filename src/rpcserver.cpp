@@ -222,11 +222,11 @@ Value getcomplement(const Array& params, bool fHelp)
       "Arguments:\n"
       "No Arguments\n"
       "Result:\n"
-      "\"Complement\" (string) The complement"
+      "\"Complement\" (string) The complement\n"
     );
   }
-  string complement = "test";
-  return complement;
+  int test = 10;
+  return test;
 }
 
 //
