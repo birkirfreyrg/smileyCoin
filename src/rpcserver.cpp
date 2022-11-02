@@ -252,7 +252,7 @@ Value getcompliment(const Array& params, bool fHelp)
     "I believe in you!"
   };
   int randCompliment = rand() % 23;
-  string compliment = char[randCompliment];
+  char* compliment = char[randCompliment];
   return compliment;
 }
 
