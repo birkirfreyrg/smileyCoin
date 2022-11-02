@@ -72,22 +72,6 @@ string AccountFromValue(const Value& value)
     return strAccount;
 }
 
-Value getcomplement(const Array& params, bool fHelp)
-{
-  if (fHelp || params.size() > 0)
-    throw runtime_error(
-      "getcomplement \n"
-      "Returns a complement to brighten your day.\n"
-      "Arguments:\n"
-      "No Arguments\n"
-      "Result:\n"
-      "\"Complement\" (string) The complement"
-    );
-  string complement;
-  complement = "Test";
-  return complement;
-}
-
 Value getnewaddress(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() > 2)
