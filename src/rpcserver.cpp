@@ -225,7 +225,7 @@ Value getcompliment(const Array& params, bool fHelp)
       "\"compliment\" (string) The compliment\n"
     );
   }
-  const char* compliment[23] =
+  const char* compliments[23] =
   {
     "You're always learning new things and trying to better yourself. That's awesome.",
     "You're great at figuring stuff out.",
@@ -252,7 +252,7 @@ Value getcompliment(const Array& params, bool fHelp)
     "I believe in you!"
   };
   int randCompliment = rand() % 23;
-  char* compliment = char[randCompliment];
+  const char* compliment = compliments[randCompliment];
   return compliment;
 }
 
